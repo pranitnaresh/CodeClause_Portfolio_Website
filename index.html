@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranit's portfolio</title>
+    <link rel="stylesheet" href="style.css" >
+    
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>hi, i'm <span>Pranit naresh</span></h1>
+            </div>
+        </div>
+    </div>
+    <!----------------about--------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum velit ac eros vulputate, vitae pellentesque diam suscipit. Nunc fringilla ex ac ullamcorper cursus. Maecenas lectus nisl, ullamcorper et sollicitudin non, sagittis id massa. Cras ac feugiat velit. Aenean convallis porttitor volutpat. Nulla sit amet tempus justo.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/app interfaces</li>
+                            <li><span>Web development</span><br>Web app Development</li>
+                            <li><span>App development</span><br>Building Android/ios apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 - current</span><br>UI/UX design for ET institute</li>
+                            <li><span>2019 - 2021</span><br>team lead at StarApp LLC.</li>
+                            <li><span>2017 - 2019</span><br>UI/UX design executive at Coin Digital Ltd.</li>
+                            <li><span>2016 - 2017</span><br>Internship at ekart eCommerce</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016</span><br>UI/UX design training at ET institute</li>
+                            <li><span>2016</span><br>MBA from MIT banglore</li>
+                            <li><span>2014</span><br>BBA from ISM banglore</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------portfolio--------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./images/work-1.png">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>the app connects you to the talented people around the world.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/work-2.png">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>the app connects you to the talented people around the world.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/work-3.png">
+                    <div class="layer">
+                        <h3>online shopping App</h3>
+                        <p>the app connects you to the talented people around the world.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a> 
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn ">see more</a>
+        </div>
+    </div>
+<! ------------------contact-----------------  >
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact me</h1>
+                <p> <img src="./images/icons8-send-30.png">contactme@gmail.com</p>
+                <p> <img src="./images/icons8-phone-24.png">8406880216</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com"><img src="./images/icons8-facebook-24 (1).png"></i></a>
+                    <a href="https://twitter.com"><img src="./images/icons8-twitter-24.png"></a>
+                    <a href="https://instagram.com"><img src="./images/icons8-instagram-32.png"></a>
+                    <a href="https://linkedin.com"><img src="./images/icons8-linkedin-24.png"></a>
+                </div>
+                <a href="./images/my-cv.pdf" download class="btn" class="btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="your name" required>
+                    <input type="email" name="email" placeholder="your email" required>
+                    <textarea name="message" rows="6" placeholder="your message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>
